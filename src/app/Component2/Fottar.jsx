@@ -14,19 +14,21 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="w-full bg-black text-white py-12"
+      className="w-full bg-black text-white py-12 border-t border-[#00bf8f]/30"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Logo / Name */}
         <div className="flex flex-col items-center md:items-start gap-2">
-          <div className="text-2xl font-bold text-[#00bf8f]">Shazzed Shuvo</div>
-          <p className="text-gray-400 text-sm max-w-xs text-center md:text-left">
+          <div className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#00bf8f] to-[#00f5a0]">
+            Shazzed Shuvo
+          </div>
+          <p className="text-gray-400 text-sm max-w-xs text-center md:text-left leading-relaxed">
             “Strive for progress, not perfection.”  
             <br />
-            Building modern web experiences with passion and creativity.
+            Building modern web experiences with passion, creativity, and precision. 🚀
           </p>
         </div>
 
@@ -38,9 +40,9 @@ const Footer = () => {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.3, rotate: 10 }}
+              whileHover={{ scale: 1.4, rotate: 15, backgroundColor: "#00bf8f" }}
               whileTap={{ scale: 0.9 }}
-              className="text-white w-10 h-10 flex items-center justify-center rounded-full bg-[#00bf8f]/20 shadow-lg shadow-[#00bf8f]/40 hover:shadow-[#00bf8f]/70 transition-all duration-300 text-xl"
+              className="text-white w-12 h-12 flex items-center justify-center rounded-full bg-[#00bf8f]/20 shadow-lg shadow-[#00bf8f]/40 hover:shadow-[#00bf8f]/70 transition-all duration-300 text-2xl"
             >
               {social.icon}
             </motion.a>
@@ -51,7 +53,7 @@ const Footer = () => {
         <div className="text-center md:text-right mt-4 md:mt-0 text-gray-400 text-sm">
           © {new Date().getFullYear()} Shazzed Shuvo. All rights reserved.
           <br />
-          Keep learning, keep building, keep growing! 🚀
+          Keep learning, keep building, and keep growing! 🌟
         </div>
       </div>
     </motion.footer>

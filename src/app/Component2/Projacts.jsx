@@ -4,22 +4,46 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Portfolio Website",
-    description: "A personal portfolio website built with React and Tailwind CSS.",
-    image: "/project1.png", // তোমার public folder এর image path
+    title: "TechLearning Portfolio",
+    description:
+      "A modern and responsive developer portfolio built using Next.js, React, and Tailwind CSS. Includes smooth animations, optimized performance, and a clean UI.",
+    image: "/333.jpg",
     link: "https://techlearning-website.vercel.app/",
   },
   {
-    title: "E-commerce App",
-    description: "Full-stack MERN e-commerce application with payment integration.",
-    image: "/project2.png", // তোমার public folder এর image path
+    title: "ElectroShop E-Commerce",
+    description:
+      "A full-stack MERN e-commerce platform offering product filtering, shopping cart, user authentication, and secure payment integration.",
+    image: "/111.jpg",
     link: "https://elatronix-store420.netlify.app/",
   },
   {
-    title: "Chat App",
-    description: "Real-time chat application using Next.js and Socket.io.",
-    image: "/project3.png", // তোমার public folder এর image path
+    title: "Furniture Shop Website",
+    description:
+      "A beautifully designed and responsive furniture store built with Next.js. Features modern UI, smooth animations, and great user experience.",
+    image: "/222.jpg",
     link: "https://rojact-with-next-js1.vercel.app/",
+  },
+  {
+    title: "Shuvo Portfolio",
+    description:
+      "A polished personal portfolio showcasing skills, experience, and completed projects—developed with Next.js, Tailwind CSS, and Framer Motion.",
+    image: "/shuvo.jpg",
+    link: "https://portfolio-site-beryl-phi.vercel.app/",
+  },
+  {
+    title: "Shuvo Portfolio",
+    description:
+      "A polished personal portfolio showcasing skills, experience, and completed projects—developed with Next.js, Tailwind CSS, and Framer Motion.",
+    image: "/shuvo.jpg",
+    link: "https://portfolio-site-beryl-phi.vercel.app/",
+  },
+  {
+    title: "Shuvo Portfolio",
+    description:
+      "A polished personal portfolio showcasing skills, experience, and completed projects—developed with Next.js, Tailwind CSS, and Framer Motion.",
+    image: "/shuvo.jpg",
+    link: "https://portfolio-site-beryl-phi.vercel.app/",
   },
 ];
 
@@ -38,6 +62,8 @@ const Projects = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#111111] rounded-2xl overflow-hidden shadow-lg hover:shadow-[#00bf8f]/50 transition-all duration-300"
+
+            /** 👇 তোমার original motion animations — untouched */
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -50,7 +76,9 @@ const Projects = () => {
             />
             <div className="p-4">
               <h3 className="text-xl font-bold text-[#00bf8f] mb-2">{project.title}</h3>
-              <p className="text-gray-300 text-sm">{project.description}</p>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                {project.description}
+              </p>
             </div>
           </motion.a>
         ))}

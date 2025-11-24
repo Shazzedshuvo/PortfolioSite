@@ -12,33 +12,32 @@ import {
 } from "react-icons/fa";
 
 export default function Home1() {
-  const roles = useMemo(() => ["Web Developer", "MERN Stack Developer"], []);
+  const roles = useMemo(
+    () => ["Web Developer", "MERN Stack Developer", "Frontend Engineer"],
+    []
+  );
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
 
+  // Typing effect
   useEffect(() => {
     const current = roles[index];
-    const timeout = setTimeout(
-      () => {
-        if (!deleting && subIndex < current.length) {
-          setSubIndex((v) => v + 1);
-        } else if (!deleting && subIndex === current.length) {
-          setDeleting(true);
-        } else if (deleting && subIndex > 0) {
-          setSubIndex((v) => v - 1);
-        } else if (deleting && subIndex === 0) {
-          setDeleting(false);
-          setIndex((p) => (p + 1) % roles.length);
-        }
-      },
-      deleting ? 50 : 100
-    );
-
+    const timeout = setTimeout(() => {
+      if (!deleting && subIndex < current.length) {
+        setSubIndex((v) => v + 1);
+      } else if (!deleting && subIndex === current.length) {
+        setDeleting(true);
+      } else if (deleting && subIndex > 0) {
+        setSubIndex((v) => v - 1);
+      } else if (deleting && subIndex === 0) {
+        setDeleting(false);
+        setIndex((p) => (p + 1) % roles.length);
+      }
+    }, deleting ? 50 : 120);
     return () => clearTimeout(timeout);
   }, [subIndex, index, deleting, roles]);
 
-  // Social links data
   const socialLinks = [
     { icon: <FaFacebookF />, href: "https://www.facebook.com/mdshazzed.hossen.98" },
     { icon: <FaGithub />, href: "https://github.com/Shazzedshuvo" },
@@ -55,31 +54,30 @@ export default function Home1() {
       {/* Background Animation */}
       <Background />
 
-      {/* Glow effects */}
+      {/* Glow Circles */}
       <div className="absolute -top-32 -left-32 w-[70vw] md:w-[40vw] h-[70vw] md:h-[40vw] rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-30 blur-[100px] animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-[70vw] md:w-[40vw] h-[70vw] md:h-[40vw] rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-30 blur-[100px] animate-pulse delay-500"></div>
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-6xl w-full px-6 md:px-12">
-        {/* Left Side - Text */}
+        {/* Left Side */}
         <motion.div
           initial={{ x: -80, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           className="md:w-1/2 text-center md:text-left space-y-5"
         >
+          {/* Typing Role */}
           <div className="text-2xl sm:text-3xl font-mono mb-4">
-            <span>{roles[index].substring(0, subIndex)}</span>
-            <span className="animate-pulse">|</span>
+            <span className="text-[#00bf8f]">{roles[index].substring(0, subIndex)}</span>
+            <span className="animate-blink">|</span>
           </div>
 
           <h1 className="text-[#00bf8f] text-2xl font-bold">Hi, I’m</h1>
           <span className="text-4xl font-bold block">Shazzed Shuvo</span>
 
-          <p className="text-gray-300 max-w-xl">
-            Hi, I’m Shazzed Shuvo — a passionate Web Developer and MERN Stack
-            Developer. I love creating modern, responsive web applications that
-            provide great user experiences and solve real problems.
+          <p className="text-gray-300 max-w-xl leading-relaxed">
+             a passionate Web Developer and MERN Stack Developer, creating modern, responsive, and interactive web applications with clean code and stunning UI.
           </p>
 
           {/* Buttons */}
@@ -112,11 +110,7 @@ export default function Home1() {
                 whileTap={{ scale: 0.9 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: index * 0.1,
-                  type: "spring",
-                  stiffness: 300,
-                }}
+                transition={{ delay: index * 0.1, type: "spring", stiffness: 300 }}
                 className="text-white w-12 h-12 flex items-center justify-center rounded-full bg-[#00bf8f]/20 shadow-lg shadow-[#00bf8f]/40 hover:shadow-[#00bf8f]/70 transition-all duration-300 text-2xl"
               >
                 {social.icon}
@@ -125,31 +119,44 @@ export default function Home1() {
           </div>
         </motion.div>
 
-        {/* Right Side - Image with Circular Frame */}
-       {/* Right Side - Image with Animated Circular Frame */}
-<div className="mt-10 md:mt-0 md:w-1/2 flex justify-center relative">
-  {/* Animated Circular Frame */}
-  <motion.div
-    className="absolute w-72 h-72 md:w-96 md:h-96 rounded-full border-4 border-[#00bf8f] opacity-50 flex items-center justify-center"
-    animate={{ rotate: 360 }}
-    transition={{
-      repeat: Infinity,
-      duration: 20,
-      ease: "linear"
-    }}
-  ></motion.div>
+        {/* Right Side Image */}
+        <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center relative">
+          {/* Glowing Halo */}
+          <motion.div
+            className="absolute w-72 h-72 rounded-full border-2 border-[#00bf8f]/40 animate-spin-slow"
+            initial={{ scale: 0.9 }}
+            animate={{ scale: 1 }}
+            transition={{ repeat: Infinity, duration: 6 }}
+          ></motion.div>
 
-  {/* Image */}
-  <motion.img
-    src="/my.png"
-    alt="Shazzed Shuvo"
-    className="relative w-64 md:w-80 rounded-2xl shadow-[0_0_40px_#00bf8f80]"
-    whileHover={{ scale: 1.05, rotate: 1 }}
-    transition={{ type: "spring", stiffness: 200 }}
-  />
-</div>
-
+          {/* Profile Image */}
+          <motion.img
+            src="/1.png"
+            alt="Shazzed Shuvo"
+            className="relative w-64 md:w-80 rounded-2xl shadow-[0_0_30px_#00bf8f80]"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 200 }}
+          />
+        </div>
       </div>
+
+      {/* Extra CSS */}
+      <style jsx>{`
+        .animate-blink {
+          animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+          from, to { opacity: 1; }
+          50% { opacity: 0; }
+        }
+        .animate-spin-slow {
+          animation: spin 20s linear infinite;
+        }
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      `}</style>
     </section>
   );
 }

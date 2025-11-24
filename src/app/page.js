@@ -6,7 +6,7 @@ import Experiance from "./Component2/Experiance";
 import Fottar from "./Component2/Fottar";
 import Home1 from "./Component2/Home1";
 import Projacts from "./Component2/Projacts";
-import References from "./Component2/References";
+// import References from "./Component2/References";
 
 import Skils from "./Component2/Skils";
 import Teastmonial from "./Component2/Teastmonial";
@@ -28,7 +28,7 @@ export default function Home() {
      <Projacts></Projacts>
      <Experiance></Experiance>
   <Teastmonial/>
-<References></References>
+{/* <References></References> */}
 <ContactPage></ContactPage>
   <Fottar></Fottar>
     </div>
