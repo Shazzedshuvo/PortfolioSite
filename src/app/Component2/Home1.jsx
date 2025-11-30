@@ -89,7 +89,7 @@ export default function Home1() {
               View My Work
             </a>
             <a
-              href="/cv.pdf"
+              href="/cv1.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-2 border-2 border-[#00bf8f] text-[#00bf8f] font-semibold rounded-full hover:bg-[#00bf8f] hover:text-black transition-colors duration-300 hover:scale-105"

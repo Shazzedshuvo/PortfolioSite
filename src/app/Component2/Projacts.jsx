@@ -24,26 +24,27 @@ const projects = [
     image: "/222.jpg",
     link: "https://rojact-with-next-js1.vercel.app/",
   },
-  {
-    title: "Shuvo Portfolio",
+   {
+    title: "  Shuvo Portfolio",
     description:
       "A polished personal portfolio showcasing skills, experience, and completed projects—developed with Next.js, Tailwind CSS, and Framer Motion.",
     image: "/shuvo.jpg",
     link: "https://portfolio-site-beryl-phi.vercel.app/",
   },
   {
-    title: "Shuvo Portfolio",
+    title: " React-Blog-Projact ",
     description:
-      "A polished personal portfolio showcasing skills, experience, and completed projects—developed with Next.js, Tailwind CSS, and Framer Motion.",
-    image: "/shuvo.jpg",
-    link: "https://portfolio-site-beryl-phi.vercel.app/",
+      "A beautifully designed and responsive furniture store built with Next.js. Features modern UI, smooth animations, and great user experience.",
+    image: "/2234.png",
+    link: "https://react-blog-projact.vercel.app/",
   },
+ 
   {
-    title: "Shuvo Portfolio",
+    title: "Ai-hospital-management-system ",
     description:
-      "A polished personal portfolio showcasing skills, experience, and completed projects—developed with Next.js, Tailwind CSS, and Framer Motion.",
-    image: "/shuvo.jpg",
-    link: "https://portfolio-site-beryl-phi.vercel.app/",
+      "It is a clean, responsive application built with real-time data views, advanced search, and future AI integration (such as voice search and live chat) in mind. airokom aro kiso dascription daw to amr websiter.",
+    image: "/Ai.png",
+    link: "https://ai-hospital-management-system-alpha.vercel.app/",
   },
 ];
 

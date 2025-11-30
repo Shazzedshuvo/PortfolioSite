@@ -26,7 +26,7 @@ export default function Nav() {
 
   const resumeButton = (
     <motion.a
-      href="/cv.pdf"
+      href="/cv1.pdf"
       target="_blank"
       rel="noopener noreferrer"
       whileHover={{ scale: 1.05, backgroundColor: "#00bf8f", color: "#000" }}
