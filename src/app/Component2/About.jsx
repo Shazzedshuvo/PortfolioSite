@@ -52,6 +52,13 @@ const About = () => {
               <p>SSC(2018 - 2020)</p>
             </div>
           </div>
+          <div className="flex items-start gap-3">
+            <FaGraduationCap className="text-[#00bf8f] text-3xl mt-1" />
+            <div>
+              <h3 className="font-semibold"> Uttara University </h3>
+              <p>B.S.C in computer science  Dec 2025 Present</p>
+            </div>
+          </div>
         </div>
 
         {/* Skills */}

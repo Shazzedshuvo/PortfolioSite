@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const navitems = [
   { id: "home", label: "Home" },
-  { id: "about", label: "About Us" },
+  { id: "about", label: "About ME" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact Us" },
@@ -26,7 +26,7 @@ export default function Nav() {
 
   const resumeButton = (
     <motion.a
-      href="/cv1.pdf"
+      href="/cv2.pdf"
       target="_blank"
       rel="noopener noreferrer"
       whileHover={{ scale: 1.05, backgroundColor: "#00bf8f", color: "#000" }}

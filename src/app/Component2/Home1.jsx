@@ -1,15 +1,12 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import Background from "../Componnt/Bagground";
+
 import { motion } from "framer-motion";
-import {
-  FaFacebookF,
-  FaGithub,
-  FaLinkedinIn,
-  FaYoutube,
-  FaGlobe,
-} from "react-icons/fa";
+import { FaFacebookF, FaGithub, FaLinkedinIn, FaYoutube, FaGlobe } from "react-icons/fa";
+import Photo from "./Photo";
+
+// optional if you want stats
 
 export default function Home1() {
   const roles = useMemo(
@@ -52,8 +49,7 @@ export default function Home1() {
       className="w-full h-screen relative bg-black overflow-hidden text-white flex items-center justify-center"
     >
       {/* Background Animation */}
-      <Background />
-
+  
       {/* Glow Circles */}
       <div className="absolute -top-32 -left-32 w-[70vw] md:w-[40vw] h-[70vw] md:h-[40vw] rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-30 blur-[100px] animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-[70vw] md:w-[40vw] h-[70vw] md:h-[40vw] rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-30 blur-[100px] animate-pulse delay-500"></div>
@@ -77,7 +73,7 @@ export default function Home1() {
           <span className="text-4xl font-bold block">Shazzed Shuvo</span>
 
           <p className="text-gray-300 max-w-xl leading-relaxed">
-             a passionate Web Developer and MERN Stack Developer, creating modern, responsive, and interactive web applications with clean code and stunning UI.
+            a passionate Web Developer and MERN Stack Developer, creating modern, responsive, and interactive web applications with clean code and stunning UI.
           </p>
 
           {/* Buttons */}
@@ -89,7 +85,7 @@ export default function Home1() {
               View My Work
             </a>
             <a
-              href="/cv1.pdf"
+              href="/cv2.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-2 border-2 border-[#00bf8f] text-[#00bf8f] font-semibold rounded-full hover:bg-[#00bf8f] hover:text-black transition-colors duration-300 hover:scale-105"
@@ -117,26 +113,16 @@ export default function Home1() {
               </motion.a>
             ))}
           </div>
+
+          {/* Stats / Stars section (optional) */}
+          <div className="mt-12">
+       
+          </div>
         </motion.div>
 
         {/* Right Side Image */}
-        <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center relative">
-          {/* Glowing Halo */}
-          <motion.div
-            className="absolute w-72 h-72 rounded-full border-2 border-[#00bf8f]/40 animate-spin-slow"
-            initial={{ scale: 0.9 }}
-            animate={{ scale: 1 }}
-            transition={{ repeat: Infinity, duration: 6 }}
-          ></motion.div>
-
-          {/* Profile Image */}
-          <motion.img
-            src="/1.png"
-            alt="Shazzed Shuvo"
-            className="relative w-64 md:w-80 rounded-2xl shadow-[0_0_30px_#00bf8f80]"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 200 }}
-          />
+        <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center items-center relative">
+          <Photo />
         </div>
       </div>
 

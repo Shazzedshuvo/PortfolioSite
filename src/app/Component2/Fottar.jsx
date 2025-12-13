@@ -4,30 +4,7 @@ import { motion } from "framer-motion";
 import { FaFacebookF, FaGithub, FaLinkedinIn, FaYoutube, FaGlobe } from "react-icons/fa";
 
 // Background Gradient Title
-const GradientTitle = ({ text }) => (
-  <h1
-    className="
-      text-[120px]          // ↓ smaller font size
-      md:text-[180px]       // medium screen
-      lg:text-[240px]       // large screen
-      font-semibold 
-      tracking-wider 
-      text-center 
-      p-0 
-      m-0 
-      bg-clip-text 
-      text-transparent
-      leading-none          // ↓ remove extra height
-      select-none           // user can't highlight (more clean)
-    "
-    style={{
-      backgroundImage: "linear-gradient(90deg, #8A7384 28.67%, #CAC3C3 46.17%)",
-      fontFamily: "Alexandria, sans-serif",
-    }}
-  >
-    {text}
-  </h1>
-);
+
 
 const Footer = () => {
   const socialLinks = [
@@ -46,9 +23,7 @@ const Footer = () => {
       transition={{ duration: 0.8 }}
     >
       {/* Background Title */}
-      <div className="absolute w-full flex justify-center bottom-0 opacity-20 pointer-events-none">
-        <GradientTitle text="Shuvo" />
-      </div>
+     
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Logo / Name */}

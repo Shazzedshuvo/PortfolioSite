@@ -9,6 +9,7 @@ import Projacts from "./Component2/Projacts";
 // import References from "./Component2/References";
 
 import Skils from "./Component2/Skils";
+import { Stars } from "./Component2/Stars";
 import Teastmonial from "./Component2/Teastmonial";
 // import Bagground from "./Componnt/Bagground";
 import CustomCoursor from "./Componnt/CustomCoursor";
@@ -23,6 +24,7 @@ export default function Home() {
       
      <Navbar></Navbar>
      <Home1></Home1>
+     <Stars></Stars>
      <About></About>
      <Skils></Skils>
      <Projacts></Projacts>
